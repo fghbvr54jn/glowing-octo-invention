@@ -1,0 +1,133 @@
+html { scroll-behavior: smooth; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Roboto', sans-serif; background: #0a0a0a; color: #fff; line-height: 1.6; }
+h1, h2, h3, .logo { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; background: rgba(0,0,0,0.95); position: fixed; width: 100%; z-index: 1000; border-bottom: 1px solid #222; }
+.logo { font-size: 28px; letter-spacing: 2px; font-weight: 700; }
+.logo span { color: #f39c12; }
+nav a { color: #fff; text-decoration: none; margin-left: 20px; font-size: 13px; font-weight: bold; transition: 0.3s; }
+nav a:hover { color: #f39c12; }
+.hero { 
+    height: 100vh; 
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), 
+                url('bg.jpg') center/cover no-repeat, #111; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+    padding: 0 20px;
+}
+.hero-content { max-width: 800px; }
+.hero h1 { font-size: clamp(35px, 7vw, 65px); margin-bottom: 20px; color: #fff; }
+.hero h1 span { color: #f39c12; display: block; }
+.btn-main { display: inline-block; background: #f39c12; color: #000; padding: 16px 40px; text-decoration: none; font-weight: bold; border-radius: 4px; transition: 0.3s; margin-top: 20px; }
+.btn-main:hover { background: #fff; transform: translateY(-3px); }
+
+.features { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 60px 8%; background: #0d0d0d; }
+.feat-item { flex: 1; min-width: 250px; text-align: center; padding: 30px; background: #111; border: 1px solid #1a1a1a; border-radius: 8px; }
+.feat-item h3 { color: #f39c12; margin: 10px 0; }
+
+.section-title { text-align: center; margin: 50px 0; font-size: 32px; color: #fff; }
+.price-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 0 8%; }
+.price-card { background: #111; padding: 30px; width: 280px; text-align: center; border: 1px solid #222; border-radius: 10px; }
+.featured { border: 2px solid #f39c12; position: relative; transform: scale(1.05); }
+.price { font-size: 32px; color: #f39c12; margin: 10px 0; font-weight: bold; }
+.cabinet { padding: 60px 0; background: #0a0a0a; text-align: center; }
+.central-container { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 30px; 
+}
+.auth-form { 
+    width: 90%; 
+    max-width: 400px; 
+    background: #111; 
+    padding: 30px; 
+    border-radius: 12px; 
+    border: 1px solid #222;
+}
+.auth-form label { display: block; margin-bottom: 15px; color: #888; }
+input, select { width: 100%; padding: 12px; margin-bottom: 15px; background: #1a1a1a; border: 1px solid #333; color: #fff; border-radius: 6px; }
+.auth-form button { width: 100%; padding: 15px; background: #f39c12; border: none; font-weight: bold; cursor: pointer; border-radius: 6px; }
+.club-card { 
+    width: 360px; height: 210px; 
+    background: linear-gradient(135deg, #222 0%, #000 100%); 
+    border: 1px solid #f39c12; 
+    border-radius: 15px; 
+    padding: 25px; 
+    position: relative; 
+    text-align: left;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    animation: slideUp 0.5s ease-out;
+}
+.card-header { font-size: 14px; color: #f39c12; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 40px; font-weight: bold; }
+#cardName { font-size: 20px; color: #fff; margin-bottom: 5px; }
+.chip { width: 45px; height: 32px; background: #555; border-radius: 4px; position: absolute; top: 75px; right: 30px; }
+.logo-watermark { position: absolute; bottom: 20px; right: 25px; font-size: 24px; font-family: 'Oswald'; opacity: 0.1; }
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+footer { background: #000; padding: 40px 8%; margin-top: 60px; border-top: 1px solid #1a1a1a; }
+.footer-cols { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+.reviews-section { padding: 60px 8%; background: #0f0f0f; }
+.reviews-grid { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+.review-item { 
+    flex: 1; 
+    min-width: 280px; 
+    max-width: 350px; 
+    background: #111; 
+    padding: 25px; 
+    border-left: 3px solid #f39c12; 
+    font-style: italic;
+    border-radius: 0 10px 10px 0;
+}
+.review-item span { 
+    display: block; 
+    margin-top: 15px; 
+    color: #f39c12; 
+    font-style: normal; 
+    font-weight: bold; 
+    font-size: 14px;
+}
+#cardTrainer { color: #f39c12; font-weight: bold; }
+#trainerSelect { margin-top: 5px; border-color: #444; }
+.footer-map { 
+    flex: 1; 
+    min-width: 320px; 
+    max-width: 500px;
+}
+.footer-map iframe {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+.user-profile {
+    background: #111;
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    width: 100%;
+    max-width: 500px;
+}
+.profile-header { margin-bottom: 30px; text-align: left; border-bottom: 1px solid #222; padding-bottom: 15px; }
+.status-online { color: #27ae60; font-size: 14px; font-weight: bold; }
+.btn-exit {
+    margin-top: 25px;
+    background: transparent;
+    color: #888;
+    border: 1px solid #333;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-exit:hover { color: #ff3e3e; border-color: #ff3e3e; }
+#authBlock { transition: 0.5s; }
+.auth-promo {
+    text-align: center;
+    padding: 40px;
+    background: #111;
+    border-radius: 10px;
+    border: 1px dashed #f39c12;
+}
+.auth-promo p { margin-bottom: 20px; color: #888; }

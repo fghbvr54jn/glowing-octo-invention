@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вхід та Реєстрація | VIGOR GYM</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body style="display: flex; align-items: center; justify-content: center; min-height: 100vh; background: #0a0a0a;">
+
+    <div class="auth-container" style="max-width: 450px; width: 90%; background: #111; padding: 30px; border-radius: 15px; border: 1px solid #222;">
+        <div style="display: flex; gap: 20px; margin-bottom: 25px; border-bottom: 1px solid #333; padding-bottom: 10px;">
+            <button onclick="toggleAuth('login')" id="tabLogin" style="background:none; border:none; color:#f39c12; cursor:pointer; font-family:'Oswald'; font-size:18px;">ВХІД</button>
+            <button onclick="toggleAuth('reg')" id="tabReg" style="background:none; border:none; color:#555; cursor:pointer; font-family:'Oswald'; font-size:18px;">РЕЄСТРАЦІЯ</button>
+        </div>
+        <div id="loginForm">
+            <input type="text" id="loginName" placeholder="Ваше Ім'я">
+            <input type="password" id="loginPass" placeholder="Пароль">
+            <button onclick="handleLogin()" style="width:100%; padding:15px; background:#f39c12; border:none; font-weight:bold; cursor:pointer;">УВІЙТИ</button>
+        </div>
+        <div id="regForm" style="display: none;">
+            <input type="text" id="regName" placeholder="Повне Ім'я">
+            <input type="password" id="regPass" placeholder="Пароль">
+            <select id="passType">
+                <option value="morning">Ранковий тариф</option>
+                <option value="unlimited">Повний Безліміт</option>
+                <option value="weekend">Вихідного дня</option>
+            </select>
+            <select id="trainerSelect">
+                <option value="самостійно">Самостійно</option>
+                <option value="Артем Волков">Артем Волков</option>
+                <option value="Олена Світла">Олена Світла</option>
+                <option value="Дмитро Титан">Дмитро Титан</option>
+            </select>
+            <button onclick="handleRegister()" style="width:100%; padding:15px; background:#f39c12; border:none; font-weight:bold; cursor:pointer;">СТВОРИТИ АККАУНТ</button>
+        </div>
+
+        <p style="text-align: center; margin-top: 20px;">
+            <a href="index.html" style="color: #666; text-decoration: none; font-size: 14px;">← На головну</a>
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
